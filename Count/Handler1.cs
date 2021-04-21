@@ -4,9 +4,9 @@ namespace Count
 {
     public class Handler1
     {
-        public void Message()
+        public void Message(int count)
         {
-            Console.WriteLine($"It's time to act, because already 77");
+            Console.WriteLine($"It's time to act, because already {count}");
         }
     }
 }

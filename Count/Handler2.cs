@@ -4,9 +4,9 @@ namespace Count
 {
     public class Handler2
     {
-        public void Message()
+        public void Message(int count)
         {
-            Console.WriteLine($"It's already 77, it's high time to start");
+            Console.WriteLine($"It's already {count}, it's high time to start");
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿
-
-namespace Count
+﻿namespace Count
 {
     public class Counter
     {
@@ -11,7 +9,7 @@ namespace Count
             _currentCount = 0;
         }
 
-        public delegate void CounterHandler();
+        public delegate void CounterHandler(int countReached);
         public event CounterHandler OnValueReached;
 
         public void Count(int neededCount)
@@ -21,11 +19,9 @@ namespace Count
                 _currentCount = i;
                 if (_currentCount == neededCount)
                 {
-                    OnValueReached?.Invoke();
+                    OnValueReached?.Invoke(_currentCount);
                 }
             }
         }
-
-
     }
 }

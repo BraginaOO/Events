@@ -1,5 +1,4 @@
-﻿
-namespace Count
+﻿namespace Count
 {
     public class Program
     {
@@ -11,7 +10,7 @@ namespace Count
 
             counter.OnValueReached += handler1.Message;
             counter.OnValueReached += handler2.Message;
-            counter.Count(77);
+            counter.Count(30);
         }
     }
 }
