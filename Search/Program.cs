@@ -1,12 +1,14 @@
-﻿using System;
+﻿using System.Collections.Generic;
 
 namespace Search
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<string> listOfStrings = new List<string>() {"test", "Test2", "1m", "new test"};
+            StringSearcher.OnFoundResult += Handler.DisplayMessage;
+            StringSearcher.Search(listOfStrings);
         }
     }
 }
